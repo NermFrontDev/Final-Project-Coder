@@ -1818,7 +1818,7 @@ body {
 
 .footer_columns-description {
     text-align: center;
-    padding: 60px 0;
+    padding: 5%;
 }
 
 .footer_columns-description img {
@@ -1879,6 +1879,7 @@ body {
     
     .footer_columns-description {
         text-align: left;
+        line-height: 1.2em;
         padding: 0;
         max-width: 350px;
     }
