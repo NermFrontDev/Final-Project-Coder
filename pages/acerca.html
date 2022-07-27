@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="../css/styles.css">
     <title>Acerca de | Bistro</title>
 </head>
@@ -54,18 +55,18 @@
 
     <section class="container-fluid banner-top-about">
         <div class="container d-flex col-10 text-center text-lg-start align-items-center banner-top_content">
-            <h1 class="fw-bold">Acerca de<br>Nosotros</h1>
+            <h1 class="fw-bold animate__animated animate__fadeInUp animate__delay-1s">Acerca de<br>Nosotros</h1>
         </div>
     </section>
 
     <!-- ======================= Section Content Start ======================= -->
     <section class="about-info">
         <div class="container col-10 col-md-12 p-5 d-grid d-lg-flex align-items-center justify-content-around gap-4 about-info_content">
-            <div class="text-center text-lg-start d-flex justify-content-center about-info_img">
+            <div class="text-center text-lg-start d-flex justify-content-center about-info_img wow animate__animated animate__fadeInLeft animate__delay-1s">
                 <img class="rounded" src="../images/about-page/info-about.jpeg" alt="Bistro">
                 <img class="rounded mt-4 ms-3" src="../images/about-page/chef-info.jpeg" alt="Chef Bistro UNAV">
             </div>
-            <div class="col-lg-5 text-center text-lg-start about-info_container">
+            <div class="col-lg-5 text-center text-lg-start about-info_container wow animate__animated animate__fadeInRight animate__delay-2s">
                 <h6>// Conoce más acerca de Veggieden</h6>
                 <h1 class="fw-bolder">Alimentos Orgánicos de Confianza</h1>
                 <p class="about-info_container-modifier">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis quos tempore, dicta dolorum dolores blanditiis assumenda adipisci.</p>
@@ -77,7 +78,7 @@
     </section>
     <section class="container-fluid why">
         <h2 class="text-center mb-5 fw-bolder display-6">Porqué Nosotros</h2>
-        <div class="container d-grid d-lg-flex gap-5 col-8 col-md-10 why_cards">
+        <div class="container d-grid d-lg-flex gap-5 col-8 col-md-10 why_cards wow animate__animated animate__slideInUp animate__delay-1s">
             <div class="text-center p-4 why_cards-contain">
                 <div class="why_cards-content">
                     <img class="mb-3" src="../images/global-icons/menu.png" alt="icons">
@@ -104,7 +105,7 @@
     <section class="team">
         <h2 class="text-center mb-5 fw-bolder display-6">Nuestro Equipo</h2>
         <div class="container d-flex flex-column align-items-center d-lg-flex flex-lg-row col-lg-10 gap-5 col-8 col-md-10 justify-content-around team-cards">
-            <div class="col-10 col-lg-3 d-grid gap-2 text-center p-4 team_container">
+            <div class="col-10 col-lg-3 d-grid gap-2 text-center p-4 team_container wow animate__animated animate__fadeInUp animate__delay-1s">
                 <div class="text-center team_container-img">
                     <img class="rounded" src="../images/about-page/chef-team.jpeg" alt="Equipo Bistro">
                 </div>
@@ -116,7 +117,7 @@
                     <a href="#"><i class="fs-3 fa-brands fa-linkedin"></i></a>
                 </div>
             </div>
-            <div class="col-10 col-lg-3 d-grid gap-2 text-center p-4 team_container">
+            <div class="col-10 col-lg-3 d-grid gap-2 text-center p-4 team_container wow animate__animated animate__fadeInUp animate__delay-2s">
                 <div class="text-center team_container-img">
                     <img class="rounded" src="../images/about-page/chef-team.jpeg" alt="Equipo Bistro">
                 </div>
@@ -128,7 +129,7 @@
                     <a href="#"><i class="fs-3 fa-brands fa-linkedin"></i></a>
                 </div>
             </div>
-            <div class="col-10 col-lg-3 d-grid gap-2 text-center p-4 team_container">
+            <div class="col-10 col-lg-3 d-grid gap-2 text-center p-4 team_container wow animate__animated animate__fadeInUp animate__delay-3s">
                 <div class="text-center team_container-img">
                     <img class="rounded" src="../images/about-page/chef-team.jpeg" alt="Equipo Bistro">
                 </div>
@@ -261,5 +262,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     <!-- ==================== Script Boostratp ==================== -->
+
+    <!-- ======================= Script Wow ======================= -->
+
+    <script src="https://cdn.boomcdn.com/libs/wow-js/1.3.0/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+    <!-- ======================= Script Wow ======================= -->
+
 </body>
 </html>

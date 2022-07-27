@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="css/styles.css">
     <title>Inicio | Bistro UNAV</title>
 </head>
@@ -56,11 +57,11 @@
         <div class="container col-lg-12  col-10">
             <div class="row">
                 <div class="align-items-center site-title">
-                    <h1 class="fw-bold display-5 mt-5 mb-2">Good food <br>choices are good<br>investments</h1>
-                    <p class="mt-3 mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>Minus cumque facilis architecto sapiente et tenetur commodi.</p>
+                    <h1 class="animate__animated animate__fadeInUp fw-bold display-5 mt-5 mb-2">Good food <br>choices are good<br>investments</h1>
+                    <p class="animate__animated animate__fadeInUp animate__delay-1s mt-3 mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>Minus cumque facilis architecto sapiente et tenetur commodi.</p>
                     <div class="col-12">
-                        <button href="#" class="btn1 mr-4">Ordenar Ahora</button>
-                        <button href="#" class="btn2 ms-3">Saber Más</button>
+                        <button href="#" class="animate__animated animate__fadeInUp animate__delay-2s btn1 mr-4">Ordenar Ahora</button>
+                        <button href="#" class="animate__animated animate__fadeInUp animate__delay-2s btn2 ms-3">Saber Más</button>
                     </div>
                 </div>
             </div>
@@ -72,19 +73,19 @@
     <!-- ======================= Section Content Start ======================= -->
     <section class="container-fluid d-flex align-items-center datos">
         <div class="container align-middle col-12 d-flex flex-row justify-content-around text-center items-datos">
-            <div>
+            <div class="wow animate__animated animate__fadeInUp">
                 <h3 class="fw-bolder fs-2">+1235</h3>
                 <p>Clientes</p>
             </div>
-            <div>
+            <div class="wow animate__animated animate__fadeInUp animate__delay-1s">
                 <h3 class="fw-bolder fs-2">+3287</h3>
                 <p>Ingredientes</p>
             </div>
-            <div>
+            <div class="wow animate__animated animate__fadeInUp animate__delay-2s">
                 <h3 class="fw-bolder fs-2">+1440</h3>
                 <p>Sabores</p>
             </div>
-            <div>
+            <div class="wow animate__animated animate__fadeInUp animate__delay-3s">
                 <h3 class="fw-bolder fs-2">+210</h3>
                 <p>Platillos</p>
             </div>
@@ -93,9 +94,9 @@
     <section class="container-fluid info-index">
         <div class="container d-lg-flex col-10 col-lg-12 text-center text-lg-start align-items-center justify-content-between info-index-content">
             <div class="mb-4 mb-lg-0 info-index_image">
-                <img class="rounded mx-auto d-block" src="images/index-page/info.png" alt="Bistro info">
+                <img class="wow animate__animated animate__fadeInLeft rounded mx-auto d-block" src="images/index-page/info.png" alt="Bistro info">
             </div>
-            <div class="info-index_container-content">
+            <div class="info-index_container-content wow animate__animated animate__fadeInRight animate__delay-1s">
                 <h2 class="fw-bold">We pride ourselves on making real food fron the best ingredients.</h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum ipsam dolore dignissimos quas aperiam ad voluptatibus reprehenderit doloribus.</p>
                 <button href="#">Saber Más</button>
@@ -104,8 +105,8 @@
     </section>
     <section class="container-fluid video-banner">
         <div class="container col-10 col-lg-6 pt-5 pb-5 video-form">
-            <div class="d-grid gap-1 align-items-center text-center video-banner_info">
-                <h2 class="fw-bold">When a man's stomach is full it makes no difference wheter he is rich or poor</h2>
+            <div class="d-grid gap-1 align-items-center text-center video-banner_info wow animate__animated animate__fadeInUp animate__delay-1s">
+                <h2 class="fw-bolder">When a man's stomach is full it makes no difference wheter he is rich or poor</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam facilis reprehenderit impedit tempore porro quibusdam esse!</p>
                 <div class="align-items-center d-flex justify-content-center link-video">
                     <i class="fa-solid fa-play"></i>
@@ -115,7 +116,7 @@
         </div>
     </section>
     <section class="container-fluid newsletter">
-        <div class="container mt-5 col-10 col-lg-6 text-center align-items-center d-grid gap-2 newsletter_info">
+        <div class="container mt-5 col-10 col-lg-6 text-center align-items-center d-grid gap-2 newsletter_info wow animate__animated animate__headShake animate__delay-1s">
             <h2 class="fw-bold">Que esperas? Suscríbete a nuesto boletín y obtén un 25% de descuento</h2>
             <p>Promoción con tiempo límite este mes. No requiere tarjeta de crédito.</p>
             <div class="d-flex text-center align-items-center justify-content-center newsletter-action">
@@ -238,7 +239,29 @@
 
 </footer>
 
+<!-- ======================== Script Bootstratp ======================== -->
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<!-- <script type="text/javascript">
+    
+    window,addEventListener("scroll", function(){
+        var navafter = document.querySelector("nav");
+        navafter.classList.toggle("bg-light-after", window.scrollY > 100);
+    });
+
+</script> -->
+
+<!-- ======================== Script Bootstratp ======================== -->
+
+<!-- ======================= Script Wow ======================= -->
+
+<script src="https://cdn.boomcdn.com/libs/wow-js/1.3.0/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+
+<!-- ======================= Script Wow ======================= -->
 
 </body>
 </html>
