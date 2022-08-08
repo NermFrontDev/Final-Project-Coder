@@ -28,6 +28,54 @@ body {
     overflow-x: hidden;
 }
 
+/* EXTENDS VARIABLES */
+
+.main-btn {
+    background-color: var(--first_color);
+    padding: 0.7em 1em;
+    color: var(--text_color-inverse);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    &:hover {
+        background-color: var(--first_color-light);
+    }
+}
+
+.second-btn {
+    background: transparent;
+    padding: 0.7em 1em;
+    color: var(--text_color);
+    border-radius: 5px;
+    border: 2px solid var(--first_color);
+    cursor: pointer;
+    text-decoration: none;
+    &:hover {
+        color: var(--second_color);
+        background-color: var(--first_color);
+        border: 2px solid var(--first_color);
+    }
+}
+
+.call-btn {
+    background-color: var(--first_color);
+    padding: 0.7em 1em;
+    color: var(--text_color-inverse);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    &:hover {
+        background-color: var(--first_color-light);
+    }
+}
+
+.image-pages_phone {
+    height: 100vw;
+}
+
+
 /* ============================================== NAVBAR CSS ============================================== */
 
 .nav-item {
@@ -86,18 +134,7 @@ body {
 
 .nav-button {
     button {
-    color: var(--text_color-inverse);
-    border-style: none;
-    background-color: var(--first_color);
-    padding: 0.7em 1em;
-    border-radius: 10px;
-    cursor: pointer;
-    }
-}
-
-.nav-button {
-    &:hover {
-        background-color: var(--first_color-light);
+    @extend .call-btn;
     }
 }
 
@@ -111,7 +148,7 @@ body {
     background: url(../images/index-page/hero-banner.jpeg) no-repeat;
     position: relative;
     width: 100%;
-    height: 91vh;
+    height: 125vw;
     object-fit: cover;
     background-position: center;
 }
@@ -122,36 +159,22 @@ body {
 }
 
 .btn1 {
-    background-color: var(--first_color);
+    @extend .main-btn;
+    padding: 0.7em 1em;
     border: 2px solid var(--first_color);
-    padding: 0.5em 1em;
-    color: var(--text_color-inverse);
-    border-radius: 5px;
-    cursor: pointer;
     &:hover {
-        background-color: var(--first_color-light);
         border: 2px solid var(--first_color-light);
     }
 }
 
 .btn2 {
-    background: transparent;
-    padding: 0.5em 1.5em;
-    color: var(--text_color);
-    border: 2px solid var(--first_color);
-    border-radius: 5px;
-    cursor: pointer;
-    &:hover {
-        color: var(--bg_color);
-        background-color: var(--first_color);
-        border: 2px solid var(--first_color);
-    }
+    @extend .second-btn;
 }
 
 @media (min-width: 1024px) {
 
     .index-banner {
-        height: 100vh;
+        height: 52vw;
     }
 
     .site-title {
@@ -175,7 +198,19 @@ body {
 .datos {
     background-color: var(--first_color);
     color: var(--text_color-inverse);
-    height: 18vh;
+    height: 20vw;
+}
+
+.items-datos {
+    h3 {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .datos {
+        height: 9vw;
+    }
 }
 
 /* =========== Info Section Start =========== */
@@ -193,24 +228,17 @@ body {
 
 .info-index_container-content {
     button {
-        background-color: var(--first_color);
-        color: var(--text_color-inverse);
-        padding: 0.7em 1.5em;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: .2s;
-        &:hover {
-            background-color: var(--first_color-light);
-        }
+        @extend .main-btn;
     }
 }
 
 @media (min-width: 1024px) {
     
-    .info-index-content {
-        padding: 5% 0;
-        max-width: 950px;
+    .info-index {
+        .info-index-content {
+            padding: 5% 0;
+            max-width: 950px;
+        }
         .info-index_image img {
             width: 100%;
             max-width: 900px;
@@ -228,7 +256,7 @@ body {
 .video-banner {
     position: relative;
     width: auto;
-    /* height: 350px; */
+    /* height: 60vw; */
     background: url(../images/index-page/video-bg.jpeg) no-repeat;
     background-size: cover;
     background-position: center;
@@ -267,15 +295,7 @@ body {
         border-radius: 5px;
     }
     button {
-        background-color: var(--first_color);
-        color: var(--text_color-inverse);
-        padding: 0.5em 1em;
-        border-radius: 5px;
-        border: none;
-        cursor: pointer;
-        &:hover {
-            background-color: var(--first_color-light);
-        }
+        @extend .main-btn;
     }
 }
 
@@ -293,7 +313,7 @@ body {
 /* =========== Banner Top Section Start =========== */
 
 .banner-top-about {
-    height: 60vh;
+    @extend .image-pages_phone;
     background: url(../images/about-page/about.jpeg) no-repeat;
     background-size: cover;
     background-position: center;
@@ -309,7 +329,7 @@ body {
 
 @media (min-width: 1024px) {
     .banner-top-about {
-        height: 70vh;
+        height: 35vw;
     }
 
     .banner-top_content {
@@ -424,7 +444,7 @@ body {
 
 .banner-top-menu {
     width: 100%;
-    height: 60vh;
+    @extend .image-pages_phone;
     background: url(../images/menu-page/menu.jpeg) no-repeat;
     background-size: cover;
     background-position: center;
@@ -432,7 +452,7 @@ body {
 
 @media (min-width: 1024px) {
     .banner-top-menu {
-        height: 70vh;
+        height: 35vw;
     }
 }
 
@@ -444,29 +464,30 @@ body {
     padding: 10% 0;
 }
 
-.info-menu_content h6 {
-    color: var(--first_color);
-}
+.info-menu_content{
+    h6 {
+        color: var(--first_color);
+    }
+}  
 
-.info-menu-container img {
+.info-menu-container { 
+    img {
     width: 100%;
     max-width: 350px;
+    }
 }
 
-.info-menu_list .fa-check {
+.info-menu_list {
+    .fa-check {
     color: var(--first_color);
     font-size: 1.5rem;
+    }
 }
 
-.info-menu_btn button {
-    background-color: var(--first_color);
-    color: var(--text_color-inverse);
-    border-radius: 5px;
-    padding: .7em 1.5em;
-    border: none;
-}
-.info-menu_btn button:hover {
-    background-color: var(--first_color-light);
+.info-menu_btn {
+    button {
+        @extend .main-btn;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -474,9 +495,11 @@ body {
         padding: 2% 0;
     }
 
-    .info-menu-container img {
-        max-width: 950px;
-    }
+    .info-menu-container {
+        img {
+            max-width: 950px;
+        }
+    } 
 }
 
 /* =========== Info Menu Section End =========== */
@@ -488,9 +511,11 @@ body {
     padding: 10% 0;
 }
 
-.title-menu a {
-    text-decoration: underline;
-}
+.title-menu {
+    a {
+        text-decoration: underline;
+    }
+} 
 
 .menu-list {
     position: relative;
@@ -560,21 +585,26 @@ body {
     align-items: flex-end;
 }
 
-.menu-precio h4 {
-    color: var(--first_color);
-}
+.menu-precio {
+    h4 {
+        color: var(--first_color);
+    }
+} 
 
-.menu-precio span {
-    font-weight: 600;
-}
+.menu-precio {
+    span {
+        font-weight: 600;
+    }
+} 
 
-.menu-comida p {
-    color: #3b3b3b;
-}
-
-.menu-comida p .bolder {
-    font-weight: 600;
-}
+.menu-comida {
+    p {
+        color: #3b3b3b;
+        .bolder {
+            font-weight: 600;
+        }
+    }
+} 
 
 @media (min-width: 1024px) {
 
@@ -582,9 +612,11 @@ body {
         padding: 5% 0;
     }
 
-    .menu-comida p {
-        max-width: 80%;
-    }
+    .menu-comida {
+        p {
+            max-width: 80%;
+        }
+    } 
 
     /* =========== Images Start =========== */
 
@@ -629,7 +661,7 @@ body {
 /* =========== Banner Top Section Start =========== */
 
 .banner-top-faqs {
-    height: 60vh;
+    @extend .image-pages_phone;
     background: url(../images/faqs-page/faqs.jpeg) no-repeat;
     background-size: cover;
     background-position: center;
@@ -637,7 +669,7 @@ body {
 
 @media (min-width: 1024px) {
     .banner-top-faqs {
-        height: 70vh;
+        height: 35vw;
     }
 }
 
@@ -649,22 +681,19 @@ body {
     padding: 10% 0;
 }
 
-.info-faqs-image img {
-    border-radius: 10px;
-    width: 100%;
-    max-width: 350px;
-}
+.info-faqs-image {
+    img {
+        border-radius: 10px;
+        width: 100%;
+        max-width: 350px;
+    }
+} 
 
-.info-faqs_btn button {
-    background-color: var(--first_color);
-    color: var(--text_color-inverse);
-    border-radius: 5px;
-    padding: .7em 1.5em;
-    border: none;
-}
-.info-faqs_btn button:hover {
-    background-color: var(--first_color-light);
-}
+.info-faqs_btn {
+    button {
+        @extend .main-btn;
+    }
+} 
 
 @media (min-width: 1024px) {
 
@@ -672,9 +701,11 @@ body {
         padding: 5% 0;
     }
 
-    .info-faqs-image img {
-        max-width: 500px;
-    }
+    .info-faqs-image {
+        img {
+            max-width: 500px;
+        }
+    } 
 }
 
 /* =========== Info Faqs Section End =========== */
@@ -682,12 +713,24 @@ body {
 /* =========== Faqs Section Start =========== */
 
 .faqs-section {
-    background-color: var(--second_color);
+    /* background-color: var(--second_color); */
     padding: 10% 0;
 }
 
-.question-container .bolder {
-    font-weight: 600;
+.question-container {
+    .bolder {
+        font-weight: 600;
+    }
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: transparent;
+    color: var(--text_color);
+    font-weight: bolder;
+}
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgb(69 158 72 / 50%);
+    /* border: 1px solid #459E48; */
 }
 
 @media (min-width: 1024px) {
@@ -696,9 +739,11 @@ body {
         padding: 5% 0;
     }
 
-    .question-container p {
-        max-width: 450px;
-    }
+    .question-container {
+        p {
+            max-width: 450px;
+        }
+    } 
 }
 
 /* =========== Faqs Section End =========== */
@@ -707,7 +752,7 @@ body {
 
 .banner-bread {
     width: 100%;
-    height: 35vh;
+    height: 40vw;
     background: url(../images/faqs-page/bread.jpeg) no-repeat;
     background-size: cover;
     background-position: center;
@@ -717,15 +762,16 @@ body {
     color: var(--text_color-inverse);
 }
 
-.banner-bread_btn button {
-    background-color: var(--first_color);
-    color: var(--text_color-inverse);
-    padding: .7em 1.5em;
-    border-radius: 5px;
-    border: none;
+.banner-bread_btn {
+    button {
+        @extend .main-btn;
+    }
 }
-.banner-bread_btn button:hover {
-    background-color: var(--first_color-light);
+
+@media (min-width: 1024px) {
+    .banner-bread {
+        height: 18vw;
+    }
 }
 
 /* =========== Bread Banner Section End =========== */
@@ -736,7 +782,7 @@ body {
 
 .banner-top-contact {
     width: 100%;
-    height: 60vh;
+    @extend .image-pages_phone;
     background: url(../images/contact-page/contact.jpeg) no-repeat;
     background-size: cover;
     background-position: center;
@@ -745,7 +791,7 @@ body {
 @media (min-width: 1024px) {
     
     .banner-top-contact {
-        height: 70vh;
+        height: 35vw;
     }
 }
 
@@ -761,14 +807,16 @@ body {
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.1);
-}
-.cards_container-content:hover {
-    transform: scale(1.1);
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
-.cards_container-content img {
-    width: 100%;
-    max-width: 50px;
+.cards_container-content {
+    img {
+        width: 100%;
+        max-width: 50px;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -797,16 +845,11 @@ body {
     padding: .7em 1.5em;
 }
 
-.columns-form button {
-    border-radius: 5px;
-    color: var(--text_color-inverse);
-    background-color: var(--first_color);
-    padding: .7em 2.5em;
-    border: none;
-    cursor: pointer;
-}
-.columns-form button:hover {
-    background-color: var(--first_color-light);
+.columns-form {
+    button {
+        @extend .main-btn;
+        padding: .7em 1.8em;
+    }
 }
 
 .form-contact_map {

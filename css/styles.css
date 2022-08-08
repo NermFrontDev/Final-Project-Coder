@@ -28,6 +28,52 @@ body {
   overflow-x: hidden;
 }
 
+/* EXTENDS VARIABLES */
+.main-btn, .columns-form button, .banner-bread_btn button, .info-faqs_btn button, .info-menu_btn button, .newsletter-action button, .info-index_container-content button, .btn1 {
+  background-color: var(--first_color);
+  padding: 0.7em 1em;
+  color: var(--text_color-inverse);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+.main-btn:hover, .columns-form button:hover, .banner-bread_btn button:hover, .info-faqs_btn button:hover, .info-menu_btn button:hover, .newsletter-action button:hover, .info-index_container-content button:hover, .btn1:hover {
+  background-color: var(--first_color-light);
+}
+
+.second-btn, .btn2 {
+  background: transparent;
+  padding: 0.7em 1em;
+  color: var(--text_color);
+  border-radius: 5px;
+  border: 2px solid var(--first_color);
+  cursor: pointer;
+  text-decoration: none;
+}
+.second-btn:hover, .btn2:hover {
+  color: var(--second_color);
+  background-color: var(--first_color);
+  border: 2px solid var(--first_color);
+}
+
+.call-btn, .nav-button button {
+  background-color: var(--first_color);
+  padding: 0.7em 1em;
+  color: var(--text_color-inverse);
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+.call-btn:hover, .nav-button button:hover {
+  background-color: var(--first_color-light);
+}
+
+.image-pages_phone, .banner-top-contact, .banner-top-faqs, .banner-top-menu, .banner-top-about {
+  height: 100vw;
+}
+
 /* ============================================== NAVBAR CSS ============================================== */
 .nav-item {
   font-weight: 500;
@@ -67,26 +113,13 @@ body {
   max-width: 150px;
 }
 
-.nav-button button {
-  color: var(--text_color-inverse);
-  border-style: none;
-  background-color: var(--first_color);
-  padding: 0.7em 1em;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.nav-button:hover {
-  background-color: var(--first_color-light);
-}
-
 /* ============================================== INDEX CSS ============================================== */
 /* =========== Hero Section Start =========== */
 .index-banner {
   background: url(../images/index-page/hero-banner.jpeg) no-repeat;
   position: relative;
   width: 100%;
-  height: 91vh;
+  height: 125vw;
   object-fit: cover;
   background-position: center;
 }
@@ -97,35 +130,16 @@ body {
 }
 
 .btn1 {
-  background-color: var(--first_color);
+  padding: 0.7em 1em;
   border: 2px solid var(--first_color);
-  padding: 0.5em 1em;
-  color: var(--text_color-inverse);
-  border-radius: 5px;
-  cursor: pointer;
 }
 .btn1:hover {
-  background-color: var(--first_color-light);
   border: 2px solid var(--first_color-light);
-}
-
-.btn2 {
-  background: transparent;
-  padding: 0.5em 1.5em;
-  color: var(--text_color);
-  border: 2px solid var(--first_color);
-  border-radius: 5px;
-  cursor: pointer;
-}
-.btn2:hover {
-  color: var(--bg_color);
-  background-color: var(--first_color);
-  border: 2px solid var(--first_color);
 }
 
 @media (min-width: 1024px) {
   .index-banner {
-    height: 100vh;
+    height: 52vw;
   }
   .site-title {
     margin: 12% 5%;
@@ -143,9 +157,18 @@ body {
 .datos {
   background-color: var(--first_color);
   color: var(--text_color-inverse);
-  height: 18vh;
+  height: 20vw;
 }
 
+.items-datos h3 {
+  margin-top: 0;
+}
+
+@media (min-width: 1024px) {
+  .datos {
+    height: 9vw;
+  }
+}
 /* =========== Info Section Start =========== */
 .info-index {
   background-color: var(--second_color);
@@ -158,29 +181,16 @@ body {
   max-width: 350px;
 }
 
-.info-index_container-content button {
-  background-color: var(--first_color);
-  color: var(--text_color-inverse);
-  padding: 0.7em 1.5em;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-.info-index_container-content button:hover {
-  background-color: var(--first_color-light);
-}
-
 @media (min-width: 1024px) {
-  .info-index-content {
+  .info-index .info-index-content {
     padding: 5% 0;
     max-width: 950px;
   }
-  .info-index-content .info-index_image img {
+  .info-index .info-index_image img {
     width: 100%;
     max-width: 900px;
   }
-  .info-index-content .info-index_container-content {
+  .info-index .info-index_container-content {
     margin-left: 50px;
   }
 }
@@ -189,7 +199,7 @@ body {
 .video-banner {
   position: relative;
   width: auto;
-  /* height: 350px; */
+  /* height: 60vw; */
   background: url(../images/index-page/video-bg.jpeg) no-repeat;
   background-size: cover;
   background-position: center;
@@ -224,18 +234,6 @@ body {
   border: 1px solid gray;
   border-radius: 5px;
 }
-.newsletter-action button {
-  background-color: var(--first_color);
-  color: var(--text_color-inverse);
-  padding: 0.5em 1em;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-}
-.newsletter-action button:hover {
-  background-color: var(--first_color-light);
-}
-
 @media (min-width: 1024px) {
   .newsletter {
     padding-top: 3%;
@@ -245,7 +243,6 @@ body {
 /* ============================================== ABOUT CSS ============================================== */
 /* =========== Banner Top Section Start =========== */
 .banner-top-about {
-  height: 60vh;
   background: url(../images/about-page/about.jpeg) no-repeat;
   background-size: cover;
   background-position: center;
@@ -261,7 +258,7 @@ body {
 
 @media (min-width: 1024px) {
   .banner-top-about {
-    height: 70vh;
+    height: 35vw;
   }
   .banner-top_content {
     padding: 20% 0;
@@ -350,7 +347,6 @@ body {
 /* =========== Hero Banner Section Start =========== */
 .banner-top-menu {
   width: 100%;
-  height: 60vh;
   background: url(../images/menu-page/menu.jpeg) no-repeat;
   background-size: cover;
   background-position: center;
@@ -358,7 +354,7 @@ body {
 
 @media (min-width: 1024px) {
   .banner-top-menu {
-    height: 70vh;
+    height: 35vw;
   }
 }
 /* =========== Hero Banner Section End =========== */
@@ -379,18 +375,6 @@ body {
 .info-menu_list .fa-check {
   color: var(--first_color);
   font-size: 1.5rem;
-}
-
-.info-menu_btn button {
-  background-color: var(--first_color);
-  color: var(--text_color-inverse);
-  border-radius: 5px;
-  padding: 0.7em 1.5em;
-  border: none;
-}
-
-.info-menu_btn button:hover {
-  background-color: var(--first_color-light);
 }
 
 @media (min-width: 1024px) {
@@ -489,7 +473,6 @@ body {
 .menu-comida p {
   color: #3b3b3b;
 }
-
 .menu-comida p .bolder {
   font-weight: 600;
 }
@@ -533,7 +516,6 @@ body {
 /* ============================================== FAQS CSS ============================================== */
 /* =========== Banner Top Section Start =========== */
 .banner-top-faqs {
-  height: 60vh;
   background: url(../images/faqs-page/faqs.jpeg) no-repeat;
   background-size: cover;
   background-position: center;
@@ -541,7 +523,7 @@ body {
 
 @media (min-width: 1024px) {
   .banner-top-faqs {
-    height: 70vh;
+    height: 35vw;
   }
 }
 /* =========== Banner Top Section End =========== */
@@ -556,18 +538,6 @@ body {
   max-width: 350px;
 }
 
-.info-faqs_btn button {
-  background-color: var(--first_color);
-  color: var(--text_color-inverse);
-  border-radius: 5px;
-  padding: 0.7em 1.5em;
-  border: none;
-}
-
-.info-faqs_btn button:hover {
-  background-color: var(--first_color-light);
-}
-
 @media (min-width: 1024px) {
   .info-faqs {
     padding: 5% 0;
@@ -579,12 +549,23 @@ body {
 /* =========== Info Faqs Section End =========== */
 /* =========== Faqs Section Start =========== */
 .faqs-section {
-  background-color: var(--second_color);
+  /* background-color: var(--second_color); */
   padding: 10% 0;
 }
 
 .question-container .bolder {
   font-weight: 600;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+  color: var(--text_color);
+  font-weight: bolder;
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(69, 158, 72, 0.5);
+  /* border: 1px solid #459E48; */
 }
 
 @media (min-width: 1024px) {
@@ -599,7 +580,7 @@ body {
 /* =========== Bread Banner Section Start =========== */
 .banner-bread {
   width: 100%;
-  height: 35vh;
+  height: 40vw;
   background: url(../images/faqs-page/bread.jpeg) no-repeat;
   background-size: cover;
   background-position: center;
@@ -609,24 +590,16 @@ body {
   color: var(--text_color-inverse);
 }
 
-.banner-bread_btn button {
-  background-color: var(--first_color);
-  color: var(--text_color-inverse);
-  padding: 0.7em 1.5em;
-  border-radius: 5px;
-  border: none;
+@media (min-width: 1024px) {
+  .banner-bread {
+    height: 18vw;
+  }
 }
-
-.banner-bread_btn button:hover {
-  background-color: var(--first_color-light);
-}
-
 /* =========== Bread Banner Section End =========== */
 /* ============================================== CONTACT CSS ============================================== */
 /* =========== Banner Top Section Start =========== */
 .banner-top-contact {
   width: 100%;
-  height: 60vh;
   background: url(../images/contact-page/contact.jpeg) no-repeat;
   background-size: cover;
   background-position: center;
@@ -634,7 +607,7 @@ body {
 
 @media (min-width: 1024px) {
   .banner-top-contact {
-    height: 70vh;
+    height: 35vw;
   }
 }
 /* =========== Banner Top Section End =========== */
@@ -648,7 +621,6 @@ body {
   border-radius: 5px;
   box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.1);
 }
-
 .cards_container-content:hover {
   transform: scale(1.1);
 }
@@ -682,16 +654,7 @@ body {
 }
 
 .columns-form button {
-  border-radius: 5px;
-  color: var(--text_color-inverse);
-  background-color: var(--first_color);
-  padding: 0.7em 2.5em;
-  border: none;
-  cursor: pointer;
-}
-
-.columns-form button:hover {
-  background-color: var(--first_color-light);
+  padding: 0.7em 1.8em;
 }
 
 .form-contact_map {
