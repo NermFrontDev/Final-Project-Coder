@@ -12,7 +12,6 @@
 }
 
 * {
-  /* padding: 0; margin: 0; */
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
@@ -28,6 +27,7 @@ body {
   overflow-x: hidden;
 }
 
+/* MIXINS SIN PARAMETROS */
 /* EXTENDS VARIABLES */
 .main-btn, .columns-form button, .banner-bread_btn button, .info-faqs_btn button, .info-menu_btn button, .newsletter-action button, .info-index_container-content button, .btn1 {
   background-color: var(--first_color);
@@ -174,7 +174,7 @@ body {
   background-color: var(--second_color);
 }
 .info-index .info-index-content {
-  padding: 12% 0;
+  padding: 10% 0;
 }
 .info-index .info-index_image img {
   width: 100%;
@@ -261,6 +261,7 @@ body {
     height: 35vw;
   }
   .banner-top_content {
+    color: var(--text_color-inverse);
     padding: 20% 0;
   }
   .banner-top_content h1 {
@@ -379,7 +380,7 @@ body {
 
 @media (min-width: 1024px) {
   .info-menu {
-    padding: 2% 0;
+    padding: 5% 0;
   }
   .info-menu-container img {
     max-width: 950px;
