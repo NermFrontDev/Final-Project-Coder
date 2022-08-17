@@ -27,6 +27,14 @@ body {
     overflow-x: hidden;
 }
 
+a {
+    text-decoration: none;
+    color: var(--text_color-inverse);
+    &:hover {
+        color: var(--text_color-inverse);
+    }
+}
+
 /* MIXINS SIN PARAMETROS */
 
 @mixin margin-top {
@@ -57,6 +65,18 @@ body {
 
 /* EXTENDS VARIABLES */
 
+.link-btn {
+    background-color: transparent;
+    color: var(--text_color);
+    text-decoration: none;
+    &:hover {
+        color: var(--first_color);
+    }
+    &:visited {
+        color: var(--text_color);
+    }
+}
+
 .main-btn {
     background-color: var(--first_color);
     padding: 0.7em 1em;
@@ -73,15 +93,14 @@ body {
 .second-btn {
     background: transparent;
     padding: 0.7em 1em;
-    color: var(--text_color);
     border-radius: 5px;
     border: 2px solid var(--first_color);
     cursor: pointer;
     text-decoration: none;
+    color: var(--text_color);
     &:hover {
-        color: var(--second_color);
-        background-color: var(--first_color);
-        border: 2px solid var(--first_color);
+        color: var(--first_color);
+        /* background-color: var(--first_color); */
     }
 }
 
@@ -196,6 +215,13 @@ body {
 
 .btn2 {
     @extend .second-btn;
+    a {
+        color: var(--text_color);
+        &:hover {
+            color: var(--first_color);
+        }
+    }
+
 }
 
 @media (min-width: 1024px) {

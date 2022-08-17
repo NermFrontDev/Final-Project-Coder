@@ -27,8 +27,28 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  text-decoration: none;
+  color: var(--text_color-inverse);
+}
+a:hover {
+  color: var(--text_color-inverse);
+}
+
 /* MIXINS SIN PARAMETROS */
 /* EXTENDS VARIABLES */
+.link-btn {
+  background-color: transparent;
+  color: var(--text_color);
+  text-decoration: none;
+}
+.link-btn:hover {
+  color: var(--first_color);
+}
+.link-btn:visited {
+  color: var(--text_color);
+}
+
 .main-btn, .columns-form button, .banner-bread_btn button, .info-faqs_btn button, .info-menu_btn button, .newsletter-action button, .info-index_container-content button, .btn1 {
   background-color: var(--first_color);
   padding: 0.7em 1em;
@@ -45,16 +65,15 @@ body {
 .second-btn, .btn2 {
   background: transparent;
   padding: 0.7em 1em;
-  color: var(--text_color);
   border-radius: 5px;
   border: 2px solid var(--first_color);
   cursor: pointer;
   text-decoration: none;
+  color: var(--text_color);
 }
 .second-btn:hover, .btn2:hover {
-  color: var(--second_color);
-  background-color: var(--first_color);
-  border: 2px solid var(--first_color);
+  color: var(--first_color);
+  /* background-color: var(--first_color); */
 }
 
 .call-btn, .nav-button button {
@@ -135,6 +154,13 @@ body {
 }
 .btn1:hover {
   border: 2px solid var(--first_color-light);
+}
+
+.btn2 a {
+  color: var(--text_color);
+}
+.btn2 a:hover {
+  color: var(--first_color);
 }
 
 @media (min-width: 1024px) {
